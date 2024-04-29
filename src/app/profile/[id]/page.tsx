@@ -1,4 +1,3 @@
-"use client"
 
 function page({params}:any) {
   return (
