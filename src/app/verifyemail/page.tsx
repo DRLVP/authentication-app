@@ -1,8 +1,9 @@
 "use client";
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+
+import React, {useEffect, useState} from "react";
+import axios from "axios";
+import Link from "next/link";
+
 export default function VerifyEmailPage() {
   const [token, setToken] = useState("");
   const [verified, setVerified] = useState(false);
@@ -17,7 +18,7 @@ export default function VerifyEmailPage() {
       setError(false)
     } catch (error:any) {
       setError(true);
-      throw new Error(error);
+      throw new Error(error.response.data);
     }
   }
 
@@ -27,7 +28,7 @@ export default function VerifyEmailPage() {
     const urlToken:any = window.location.search.split("=")[1]
     // console.log("here is the url token:: " + urlToken);
     
-    setToken(urlToken);
+    setToken(urlToken || "");
 
     // using nextjs
     // const {query} = router; 
@@ -37,10 +38,11 @@ export default function VerifyEmailPage() {
 
   useEffect(()=>{
     setError(false)
-    if (token !== undefined) {
+    if (token.length > 0) {
       verifyUserEmail()
     }
   }, [token])
+
   return (
     <section className='w-full min-h-screen'>
       <div className='flex flex-col items-center justify-center min-h-screen'>
