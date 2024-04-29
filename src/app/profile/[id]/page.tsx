@@ -1,6 +1,6 @@
 "use client"
 
-function page({params}) {
+function page({params}:any) {
   return (
     <div>
         {
