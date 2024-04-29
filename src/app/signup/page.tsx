@@ -38,7 +38,7 @@ export default function SignupPage() {
   return (
     <section className='w-full flex justify-center items-center min-h-screen'>
       <div className='flex flex-col items-center justify-center gap-2 border-[2px] border-cyan-400 px-12 py-8 rounded-sm shadow-md shadow-white'>
-       <h1>{loading ? "loading" : "signup"}</h1>
+       <h1 text-2xl text-orange-500 font-bold>{loading ? "loading" : "create account"}</h1>
        <hr />
 
        <label htmlFor="username" className='inline-block'>username:</label>

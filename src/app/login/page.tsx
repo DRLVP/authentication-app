@@ -37,7 +37,7 @@ export default function LoginPage() {
   return (
     <section className='w-full flex justify-center items-center min-h-screen'>
       <div className='flex flex-col items-center justify-center gap-2 border-[2px] border-cyan-400 px-12 py-8 rounded-sm shadow-md shadow-white'>
-       <h1 className='text-2xl text-orange-500 font-bold'>{loading ? "loading" : "login"}</h1>
+       <h1 className='text-2xl text-orange-500 font-bold'>{loading ? "loading" : "Login"}</h1>
        <hr />
        <label htmlFor="email">email:</label>
        <input 
