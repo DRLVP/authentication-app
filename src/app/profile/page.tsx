@@ -25,7 +25,7 @@ export default function ProfilePage() {
       toast.success("logged out successfully");
       console.log("logged out successfully");
       
-      router.push("/");
+      router.push("/login");
     } catch (error:any) {
       toast.error(error.message);
       throw new Error(error.message);
