@@ -71,7 +71,7 @@ export default function LoginPage() {
           }
        </button>
        <Link href="/signup" className='underline hover:text-blue-500'>
-          don't have an account ? signup
+          dont have an account & signup
        </Link>
       </div>
     </section>

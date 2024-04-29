@@ -34,7 +34,7 @@ export default function VerifyEmailPage() {
     // const {query} = router; 
     // const urlToken:any = query.token 
     // setToken(urlToken || "");
-  }, [])
+  }, [token])
 
   useEffect(()=>{
     setError(false)
